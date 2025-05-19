@@ -26,7 +26,12 @@ jobs:
       run: htmlhint index.html
 
     - name: Create stylelint config
-      run: echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+      run: |
+        cat <<EOF > .stylelintrc.json
+        {
+          "extends": "stylelint-config-standard"
+        }
+        EOF
 
     - name: Lint CSS
       run: stylelint "style.css"
