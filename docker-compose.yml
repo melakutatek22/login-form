@@ -5,4 +5,4 @@ services:
     build: .
     ports:
       - "8080:80"
-    container_name: login-ui
+    container_name: User-login
