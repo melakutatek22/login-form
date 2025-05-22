@@ -1,4 +1,4 @@
-name: Lint HTML & CSS
+name: Test HTML & CSS
 
 on:
   push:
