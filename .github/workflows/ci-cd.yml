@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -27,7 +27,7 @@ jobs:
       run: |
         npm install -g htmlhint stylelint stylelint-config-standard
 
-    - name: Lint HTML
+    - name: test HTML
       run: htmlhint index.html
 
     - name: Create stylelint config
@@ -38,5 +38,5 @@ jobs:
         }
         EOF
 
-    - name: Lint CSS
+    - name: test CSS
       run: stylelint "style.css"
